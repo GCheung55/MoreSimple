@@ -41,9 +41,9 @@ var TextOverlay = new Class({
         if(!element && !overtext){
             return false;
         }
-        this.element = $(element);
+        this.element = document.id(element);
         if (this.occlude()) return this.occluded;
-        this.overtext = $(overtext);
+        this.overtext = document.id(overtext);
         this.setOptions(options);
         this.attach(this.element);
         if(this.options.poll){
